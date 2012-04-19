@@ -1,0 +1,29 @@
+---
+layout: default
+title: Echo в России
+---
+
+{% assign post=site.posts.first %}
+<div class="post">
+    <h1 class="post__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+    <div class="post__subtitle">
+        Пишет <a href="{{ post.author_url }}">{{ post.author }}</a>,
+        {{ post.date | date: "%d.%m.%Y" }}
+    </div>
+    <div class="post__content">
+        {{ post.content }}
+    </div>
+</div><div class="post__hr"></div>
+
+
+<div class="archive">
+    <div class="archive__header">~ Предыдущие записи ~</div>
+    {% for post in site.posts offset:1 %}
+        <div class="archive__item">      
+            <a class="archive__item__link" href="{{post.url}}">{{ post.title }}</a>
+            <span class="archive__item__author">{{ post.author }}, </span>
+            <span class="archive__item__date">{{ post.date | date: "%d.%m.%Y" }}</span>
+        </div>
+        <div class="archive__hr"></div>
+    {% endfor %}
+</div>

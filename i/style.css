@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: normal;
+  src: local('PT Serif'), local('PTSerif-Regular'), url('http://themes.googleusercontent.com/static/fonts/ptserif/v3/zjBCKJs0bE-LvM0teIV5VPesZW2xOQ-xsNqO47m55DA.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: bold;
+  src: local('PT Serif Bold'), local('PTSerif-Bold'), url('http://themes.googleusercontent.com/static/fonts/ptserif/v3/QABk9IxT-LFTJ_dQzv7xpGOb2gHztoQeulij-1lvl-8.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  font-style: italic;
+  font-weight: normal;
+  src: local('PT Serif Italic'), local('PTSerif-Italic'), url('http://themes.googleusercontent.com/static/fonts/ptserif/v3/3Nwg9VzlwLXPq3fNKwVRMBsxEYwM7FgeyaSgU71cLG0.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: local('PT Sans'), local('PTSans-Regular'), url('http://themes.googleusercontent.com/static/fonts/ptsans/v2/yrzXiAvgeQQdopyG8QSg8Q.woff') format('woff');
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126 */
+html, body, div, span, applet, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none;}
+table { border-collapse: collapse; border-spacing: 0; }
+
+/*** LJ STYLE http://tonsky.livejournal.com/ | Dec 4, 2011 ***/
+
+/* common elements */
+* { box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; }
+
+pre, code { font-family: monospace; white-space: pre-wrap; }
+pre { margin: 16px 0; }
+sup, sub { vertical-align: middle; position: relative; font-size: 75%; }
+sup { bottom: 0.5em; }
+sub { top: 0.5em; }
+
+strong, b, h3, h4 { font-weight: bold; }
+em, i { font-style: italic }
+h1, h2, h3, h4, h5 { margin: 1.5em 0 0.5em 0em }
+h1 { font-size: 32px; line-height: 1.2em; }
+h2 { font-size: 24px; }
+h3 { font-size: 20px; }
+
+a { text-decoration: none; color: inherit; border-bottom: 1px solid #6af; }
+a:hover { color: #37c; }
+a:visited { border-color: #f66 }
+a:visited:hover { color: #c33 }
+a:active { position: relative; top: 1px; }
+h1 a, h2 a, h3 a { color: #269; text-decoration: none; border: none; }
+
+a > img { vertical-align: bottom; }
+ol, ul { margin: 0 0 0 2em; }
+ol { list-style-type: decimal }
+ul { list-style-type: square }
+p { margin: 1em 0; }
+/*blockquote { margin: 1em 2em; font-style: italic; }*/
+/*blockquote i, blockquote em { font-style: normal; }*/
+blockquote { 
+  padding: 12px 88px; margin: 12px -64px; 
+  color: #333;
+  border-top: 1px solid #CCC; border-bottom: 1px solid  #CCC;
+  background-color: #eee;
+  background-image: url(q1.gif), url(q2.gif);
+  background-position: 0 0, 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* layout */
+body { font: 16px/24px 'PT Serif', Cambria, serif; background: #ccc url(body.png); }
+#page { width: 754px; margin: 0 auto; }
+
+/* head */
+.head { margin: 64px 0 64px; height: 100px; text-align: center; }
+.head__logo {
+  display: inline-block; vertical-align: middle; 
+  width: 100px; height: 100px;
+  margin: 0 16px 0 -108px;
+  background: url(logo_100x100.png);
+}
+.head__header { font: 48px/100px 'PT Sans', Calibri, sans-serif; }
+.head__header a { color: #27a; }
+
+/* post */
+
+.post { padding: 24px 64px 0; margin: 32px 0 0; background: #fff; box-shadow: #99a0a5 0 3px 10px; }
+.post__hr { height: 10px; background: url(footer.png) no-repeat;  margin: 0 0 32px 0}
+.post__title { margin: 32px 0 4px 0; }
+.post__title__userpic { margin: 0 8px 0 -24px; vertical-align: middle; }
+.post__subtitle { color: #999; font: 13px/16px 'PT Sans', Calibri, sans-serif; }
+.post__content { padding: 16px 0 32px; color: #000; }
+
+.post__subtitle a { border-color: #bbb; }
+.post__subtitle a:hover { border-color: #37c; }
+.post__subtitle a:visited:hover { border-color: #c33 }
+
+/* tags */
+
+.tags { margin: 24px 0; font: 13px/24px Calibri, 'PT Sans', sans-serif; }
+.tags a { font-style: italic }
+
+/* archive */
+
+.archive {}
+.archive__hr { height: 10px; background: url(footer.png) no-repeat;  margin: 0 0 32px 0; }
+.archive__header { margin: 32px 0 32px; text-align: center; color: #777; font: 13px/16px 'PT Sans', Calibri, sans-serif; }
+.archive__item   { padding: 24px 64px 24px; margin: 32px 0 0; background: #fff; box-shadow: #99a0a5 0 3px 10px; }
+.archive__item__link { font-size: 32px; line-height: 1.2em; color: #234; border: none; display: block; }
+.archive__item__author,
+.archive__item__date { color: #777; font: 13px/16px 'PT Sans', Calibri, sans-serif; }
