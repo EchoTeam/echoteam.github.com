@@ -1,2 +1,1 @@
-echoteam.github.com
-===================
+Инженерный блог [Echo на русском](http://echorussia.ru/)
