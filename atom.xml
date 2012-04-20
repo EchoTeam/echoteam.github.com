@@ -5,10 +5,10 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Echo в России</title>
- <link href="http://echorussia.ru/atom.xml" rel="self"/>
- <link href="http://echorussia.ru/"/>
+ <link href="http://www.echorussia.ru/atom.xml" rel="self"/>
+ <link href="http://www.echorussia.ru/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://echorussia.ru/</id>
+ <id>http://www.echorussia.ru/</id>
 
  {% for post in site.posts %}
  <entry>
@@ -17,9 +17,9 @@ layout: nil
      <name>{{ post.author }}</name>
      <uri>{{ post.author_url }}</uri>
    </author>
-   <link href="http://echorussia.ru{{ post.url }}"/>
+   <link href="http://www.echorussia.ru{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://echorussia.ru{{ post.id }}</id>
+   <id>http://www.echorussia.ru{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
