@@ -93,7 +93,14 @@ body { font: 16px/24px 'PT Serif', Cambria, serif; background: #ccc url(body.png
 }
 .head__header { font: 48px/100px 'PT Sans', Calibri, sans-serif; }
 .head__header a { color: #27a; }
-
+.head__rss, .head__rss:visited { 
+  background: hsl(15, 100%, 65%); border-radius: 3px; font-size: 10px;
+  color: #FFF; 
+  padding: 2px 4px;
+  vertical-align: middle;
+  display: inline-block; line-height: 13px; margin-bottom: 40px;}
+.head__rss:hover { background: hsl(15, 100%, 70%); }
+ 
 /* post */
 
 .post { padding: 24px 64px 0; margin: 32px 0 0; background: #fff; box-shadow: #99a0a5 0 3px 10px; }
