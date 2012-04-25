@@ -87,13 +87,13 @@ body { font: 16px/24px 'PT Serif', Cambria, serif; background: #ccc url(body.png
 }
 .head__header { font: 48px/100px 'PT Sans', Calibri, sans-serif; }
 .head__header a { color: #27a; }
-.head__rss, .head__rss:visited { 
+.head__header .head__rss, .head__header .head__rss:visited { 
   background: hsl(15, 100%, 65%); border-radius: 3px; font-size: 10px;
-  color: #FFF; 
+  color: #fff; 
   padding: 2px 4px;
   vertical-align: middle;
   display: inline-block; line-height: 13px; margin-bottom: 40px;}
-.head__rss:hover { background: hsl(15, 100%, 70%); }
+.head__header .head__rss:hover { background: hsl(15, 100%, 70%); }
  
 /* post */
 
@@ -120,7 +120,7 @@ body { font: 16px/24px 'PT Serif', Cambria, serif; background: #ccc url(body.png
 .echo-linkColor, a.echo-linkColor, span.echo-linkColor, div.echo-linkColor { color: #37c; }
 a.echo-linkColor:hover, .echo-clickable.echo-linkColor:hover { color: #c33; }
 .echo-primaryColor { color: #000; }
-div.echo-primaryFont, input.echo-primaryFont, textarea.echo-primaryFont  { font: 13px 'PT Sans', Calibri, sans-serif; }
+div.echo-primaryFont, span.echo-primaryFont, input.echo-primaryFont, textarea.echo-primaryFont  { font: 13px 'PT Sans', Calibri, sans-serif; }
 div.echo-secondaryColor, input.echo-secondaryColor { color: #999; }
 div.echo-secondaryFont { font: 13px/24px 'PT Sans', Calibri, sans-serif; } 
 
@@ -132,27 +132,32 @@ div.echo-item-body { padding: 0; font: 16px/24px 'PT Serif', Cambria, serif; }
 .echo-stream-body { border: 1px solid #bbb; border-right-width: 2px;}
 .echo-item-content { background: #fff; border-bottom: 1px solid #d0d0d0; margin: 0 0; }
 .echo-item-content .echo-item-content { background: transparent; border: none; }
-div.echo-item-container { padding: 22px 18px 16px; }
+div.echo-item-container { padding: 18px 18px 12px; }
 div.echo-item-container-root-thread { padding-bottom: 0; }
 
-div.echo-item-container-child { padding: 12px 12px 6px; }
-div.echo-item-replyForm.echo-item-depth-1 { margin-bottom: 12px; padding: 10px; }
+div.echo-item-container-child { padding: 12px 12px 4px; }
+div.echo-item-replyForm.echo-item-depth-1 { margin-bottom: 22px; padding: 6px; }
 div.echo-trinaryBackgroundColor { background-color: #e7e7e7; }
 div.echo-item-childrenMarker { border-color: transparent transparent #e7e7e7; filter: none; }
-div.echo-item-depth-1 { margin-left: 44px; }
+div.echo-item-depth-1 { margin: 0 74px 2px; }
+div.echo-item-frame { margin: -2px 0 2px; }
+div.echo-item-expandChildren { padding: 9px 12px 8px 8px; }
+
+div.echo-application-message { border: none; }
 
 .comments__submit { background: #ddd; padding: 48px 64px 64px; margin: 0 -64px; }
+div.echo-submit-body { margin: 6px -1px 7px; }
 textarea.echo-submit-text { color: #000; font: 16px/24px 'PT Serif', Cambria, serif; }
 .echo-submit-text.echo-secondaryColor { color: #999; font: 13px/16px 'PT Sans', Calibri, sans-serif; }
 .echo-submit-border { border-color: #ccc; }
 
-div.echo-submit-auth { padding-right: 4px; margin-bottom: 6px; }
+div.echo-submit-auth { padding-right: 4px; }
 div.echo-submit-auth * { line-height: 24px; }
 span.echo-submit-forcedLoginUserInfoMessage { color: #933; line-height: 24px; font-weight: normal; }
 div.echo-auth-anonymous { float: right; }
-div.echo-auth-name, div.echo-auth-edit, div.echo-auth-logout { font: 13px/24px 'PT Sans', Calibri, sans-serif; margin: 0 0 0 6px; padding: 0; }
+div.echo-auth-name, div.echo-auth-edit, div.echo-auth-logout { font: 13px/24px 'PT Sans', Calibri, sans-serif; margin: 0 0 0 8px; padding: 0; }
 div.echo-auth-avatar { height: 24px; }
-
+span.echo-auth-or, span.echo-auth-signup { display: none; }
 
 div.echo-submit-header { margin-bottom: 0; }
 div.echo-submit-anonymousUserInfoFields { float: none; }
@@ -165,14 +170,14 @@ div.echo-submit-anonymousUserInfoAvatar { margin-top: 1px; }
 
 div.echo-submit-content { padding: 0 2px 1px 3px; }
 textarea.echo-submit-text { padding: 5px 3px 4px 3px; }
-input.echo-submit-text-input { padding: 5px 3px 4px 3px; }
+input.echo-submit-text-input { padding: 2px; }
 
 div.echo-submit-controls { margin-top: 6px; }
 div.echo-submit-post-container { float: none; }
 .echo-button button, .echo-button button.ui-button { 
-    padding: 0 16px;
+    padding: 0 12px;
     margin: 0; 
-    height: 36px;
+    height: 30px;
     border-radius: 3px;
     font: bold 13px/16px 'PT Sans', Calibri, sans-serif; 
     text-shadow: #EEE 0 1px 0;
