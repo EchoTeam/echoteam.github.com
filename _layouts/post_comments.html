@@ -1,0 +1,70 @@
+---
+layout: default
+---
+<div class="post">
+    <h1 class="post__title">{{ page.title }}</h1>
+    <div class="post__subtitle">
+        Пишет <a href="{{ page.author_url }}">{{ page.author }}</a>,
+        {{ page.date | date: "%d.%m.%Y" }}
+    </div>
+    <div class="post__content">
+        {{ content }}
+    </div>
+
+    <div class="comments">
+        <!-- div class="comments__hr">~ Комментарии ~</div -->
+        <div class="comments__stream"></div>
+        <div class="comments__submit"></div>
+    </div>
+
+</div><div class="post__hr"/>
+
+
+<script src="http://cdn.echoenabled.com/clientapps/v2/backplane.js"></script>
+<script type="text/javascript">
+    Backplane.init({
+        "serverBaseURL" : "http://api.echoenabled.com/v1",
+        "busName": "uldev"
+    });
+
+    var identityWindow = {
+        "width": 420,
+        "height": 260,
+        "url": "https://prokopov.rpxnow.com/openid/embed?flags=stay_in_window,no_immediate&token_url=http%3A%2F%2Fprokopov.ul.js-kit.com%2Fapps%2Fjanrain%2Fwaiting.html&bp_channel="
+    };
+
+    // init stream for new items
+    new Echo.Stream({
+        "target": $(".comments__stream"),
+        "appkey": "uldev.js-kit.com",
+        "query": "childrenof:{{ site.url }}{{ page.url }} -state:SystemFlagged,ModeratorFlagged children:1 sortOrder:chronological childrenSortOrder:chronological",
+        "viaLabel": { "icon": true, "text": true },
+        "plugins": [
+            {
+                "name": "Reply",
+                "actionString": "Ваш комментарий...",
+                "nestedPlugins": [{
+                    "name": "FormAuth",
+                    "identityManagerLogin": identityWindow,
+                    "identityManagerSignup": identityWindow,
+                    "identityManagerEdit": identityWindow
+                }]
+            }
+    ]
+    });
+
+    new Echo.Submit({
+        "target": $(".comments__submit"),
+        "appkey": "uldev.js-kit.com",
+        "targetURL": "{{ site.url }}{{ page.url }}",
+        // "source": {"name": "echorussia", "uri": "{{ site.url}}{{ page.url }}"},
+        "plugins": [
+            {
+                "name": "FormAuth",
+                "identityManagerLogin":  identityWindow,
+                "identityManagerSignup": identityWindow,
+                "identityManagerEdit":   identityWindow
+            }
+        ],
+    });
+</script>
