@@ -40,11 +40,13 @@ title: Echo в России
     $(function() {
         $(".comments_counter").each(function() {
             var $target = $(this),
-                url = $target.attr('data-url');
+                url = $target.attr('data-url')
+                q = "childrenof:" + url
+                  + " -state:SystemFlagged,ModeratorFlagged";
             new Echo.Counter({
                 "target": $target,
                 "appkey": "uldev.js-kit.com",
-                "query":  "childrenof:" + url,
+                "query": q,
                 "liveUpdates": true//false
             });
         });
