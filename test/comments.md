@@ -1,5 +1,5 @@
 ---
-layout: post_comments
+layout: post
 title: Комментарии
 author: Никита Прокопов
 author_url: http://tonsky.livejournal.com/
