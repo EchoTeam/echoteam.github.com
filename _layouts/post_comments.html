@@ -19,52 +19,54 @@ layout: default
 
 </div><div class="post__hr"/>
 
-
 <script src="http://cdn.echoenabled.com/clientapps/v2/backplane.js"></script>
-<script type="text/javascript">
-    Backplane.init({
-        "serverBaseURL" : "http://api.echoenabled.com/v1",
-        "busName": "uldev"
-    });
+<script type="text/javascript">//<![CDATA[
+    var appkey = "uldev.js-kit.com";
+    var scope = "{{ site.url }}{{ page.url }}";
 
     var identityWindow = {
         "width": 420,
-        "height": 260,
-        "url": "https://prokopov.rpxnow.com/openid/embed?flags=stay_in_window,no_immediate&token_url=http%3A%2F%2Fprokopov.ul.js-kit.com%2Fapps%2Fjanrain%2Fwaiting.html&bp_channel="
+        "height": 260,                                                                                                                             
+        "url": "https://echo.rpxnow.com/openid/embed"
+             + "?flags=stay_in_window,no_immediate"
+             + "&token_url=http%3A%2F%2Fjs-kit.com%2Fapps%2Fjanrain%2Fwaiting.html"
+             + "&bp_channel="
+    };
+    
+    var formAuth = {
+        "name": "FormAuth",
+        "identityManagerLogin": identityWindow,
+        "identityManagerSignup": identityWindow,
+        "identityManagerEdit": identityWindow,
+        "submitPermissions": "forceLogin"
     };
 
-    // init stream for new items
+    Backplane.init({
+        "serverBaseURL" : "http://api.echoenabled.com/v1",
+        "busName": "jskit"
+    });
+
     new Echo.Stream({
         "target": $(".comments__stream"),
-        "appkey": "uldev.js-kit.com",
-        "query": "childrenof:{{ site.url }}{{ page.url }} -state:SystemFlagged,ModeratorFlagged children:1 sortOrder:chronological childrenSortOrder:chronological",
+        "appkey": appkey,
+        "query": "childrenof:" + scope
+               + " -state:SystemFlagged,ModeratorFlagged"
+               + " children:1"
+               + " sortOrder:chronological"
+               + " childrenSortOrder:chronological",
         "viaLabel": { "icon": true, "text": true },
-        "plugins": [
-            {
+        "plugins": [{
                 "name": "Reply",
                 "actionString": "Ваш комментарий...",
-                "nestedPlugins": [{
-                    "name": "FormAuth",
-                    "identityManagerLogin": identityWindow,
-                    "identityManagerSignup": identityWindow,
-                    "identityManagerEdit": identityWindow
-                }]
-            }
-    ]
+                "nestedPlugins": [formAuth]
+        }]
     });
 
     new Echo.Submit({
         "target": $(".comments__submit"),
-        "appkey": "uldev.js-kit.com",
-        "targetURL": "{{ site.url }}{{ page.url }}",
-        // "source": {"name": "echorussia", "uri": "{{ site.url}}{{ page.url }}"},
-        "plugins": [
-            {
-                "name": "FormAuth",
-                "identityManagerLogin":  identityWindow,
-                "identityManagerSignup": identityWindow,
-                "identityManagerEdit":   identityWindow
-            }
-        ],
+        "appkey": appkey,
+        "targetURL": scope,
+        "plugins": [formAuth]
     });
+//]]>
 </script>

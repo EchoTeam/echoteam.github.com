@@ -37,8 +37,6 @@ blockquote, q { quotes: none; }
 blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none;}
 table { border-collapse: collapse; border-spacing: 0; }
 
-/*** LJ STYLE http://tonsky.livejournal.com/ | Dec 4, 2011 ***/
-
 /* common elements */
 * { box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; }
 
@@ -148,15 +146,23 @@ textarea.echo-submit-text { color: #000; font: 16px/24px 'PT Serif', Cambria, se
 .echo-submit-text.echo-secondaryColor { color: #999; font: 13px/16px 'PT Sans', Calibri, sans-serif; }
 .echo-submit-border { border-color: #ccc; }
 
-div.echo-submit-auth { height: 22px; padding-right: 4px; }
+div.echo-submit-auth { padding-right: 4px; margin-bottom: 6px; }
+div.echo-submit-auth * { line-height: 24px; }
+span.echo-submit-forcedLoginUserInfoMessage { color: #933; line-height: 24px; font-weight: normal; }
+div.echo-auth-anonymous { float: right; }
+div.echo-auth-name, div.echo-auth-edit, div.echo-auth-logout { font: 13px/24px 'PT Sans', Calibri, sans-serif; margin: 0 0 0 6px; padding: 0; }
+div.echo-auth-avatar { height: 24px; }
+
 
 div.echo-submit-header { margin-bottom: 0; }
+div.echo-submit-anonymousUserInfoFields { float: none; }
 input.echo-submit-anonymousUserInfoUrl { height: auto; }
 div.echo-submit-anonymousUserInfoNameContainer,
 div.echo-submit-anonymousUserInfoUrlContainer { margin: 0 0 4px 0; padding-left: 6px; }
+div.echo-submit-anonymousUserInfoUrlContainer { display: none; }
+div.echo-submit-userInfoWrapper .echo-clear { display: none; }
 div.echo-submit-anonymousUserInfoAvatar { margin-top: 1px; }
 
-div.echo-submit-body, div.echo-submit-post-container { margin-left: 53px; }
 div.echo-submit-content { padding: 0 2px 1px 3px; }
 textarea.echo-submit-text { padding: 5px 3px 4px 3px; }
 input.echo-submit-text-input { padding: 5px 3px 4px 3px; }
@@ -175,6 +181,11 @@ div.echo-submit-post-container { float: none; }
 .echo-button button.ui-state-default { border: 1px solid #68686E; background: url(/i/button.gif) #bfdd47; }
 .echo-button button.ui-state-hover, .echo-button button.ui-state-focus { border: 1px solid #444; }
 .echo-button button.ui-state-active { background: #bfdd47; }
+
+
+/* fancybox */
+
+#fancybox-wrap, #fancybox-wrap * { box-sizing: content-box; -moz-box-sizing: content-box; -ms-box-sizing: content-box; -webkit-box-sizing: contetn-box; }
 
 /* tags */
 
