@@ -147,15 +147,16 @@ div.echo-item-body { padding: 0; font: 16px/24px 'PT Serif', Cambria, serif; }
 div.echo-item-container { padding: 18px 18px 12px; }
 div.echo-item-container-root-thread { padding-bottom: 0; }
 
+div.echo-trinaryBackgroundColor { background-color: #e7e7e7; }
 div.echo-item-container-child { padding: 12px 12px 4px; }
 div.echo-item-replyForm.echo-item-depth-1 { margin-bottom: 22px; padding: 6px; }
-div.echo-trinaryBackgroundColor { background-color: #e7e7e7; }
 div.echo-item-childrenMarker { border-color: transparent transparent #e7e7e7; filter: none; }
 div.echo-item-depth-1 { margin: 0 74px 2px; }
 div.echo-item-frame { margin: -2px 0 2px; }
 div.echo-item-expandChildren { padding: 9px 12px 8px 8px; }
 
 div.echo-application-message { border: none; }
+span.echo-application-message-empty { padding: 0; background-image: none; }
 
 /* comments - submit form */
 
@@ -163,7 +164,8 @@ div.echo-application-message { border: none; }
 div.echo-submit-body { margin: 6px -1px 7px; }
 textarea.echo-submit-text { color: #000; font: 16px/24px 'PT Serif', Cambria, serif; }
 .echo-submit-text.echo-secondaryColor { color: #999; font: 13px/16px 'PT Sans', Calibri, sans-serif; }
-.echo-submit-border { border-color: #ccc; }
+.echo-submit-border { border-color: #CCC; }
+.comments__submit .echo-submit-border { border-color: #aaa; }
 
 div.echo-submit-auth { padding-right: 4px; }
 div.echo-submit-auth * { line-height: 24px; }
@@ -171,6 +173,7 @@ span.echo-submit-forcedLoginUserInfoMessage { color: #933; line-height: 24px; fo
 div.echo-auth-anonymous { float: right; }
 div.echo-auth-name, div.echo-auth-edit, div.echo-auth-logout { font: 13px/24px 'PT Sans', Calibri, sans-serif; margin: 0 0 0 8px; padding: 0; }
 div.echo-auth-avatar { height: 24px; }
+div.echo-auth-edit { display: none; }
 span.echo-auth-or, span.echo-auth-signup { display: none; }
 
 div.echo-submit-header { margin-bottom: 0; }
@@ -191,15 +194,16 @@ div.echo-submit-post-container { float: none; }
 .echo-button button, .echo-button button.ui-button { 
     padding: 0 12px;
     margin: 0; 
-    height: 30px;
-    border-radius: 3px;
-    font: bold 13px/16px 'PT Sans', Calibri, sans-serif; 
-    text-shadow: #EEE 0 1px 0;
-    box-shadow: #791 0 1px 3px;
+    height: 27px;
+    font: 13px 'PT Sans', Calibri, sans-serif; 
+    color: #333;
+    background: #bfdd47;
+    border: 1px solid #999;
+    box-shadow: #791 0 1px 0px;
 }
-.echo-button button.ui-state-default { border: 1px solid #68686E; background: url(/i/button.gif) #bfdd47; }
-.echo-button button.ui-state-hover, .echo-button button.ui-state-focus { border: 1px solid #444; }
-.echo-button button.ui-state-active { background: #bfdd47; }
+.echo-button button.ui-state-default { }
+.echo-button button.ui-state-hover, .echo-button button.ui-state-focus { border-color: #68686e; }
+.echo-button button.ui-state-active { box-shadow: none; position: relative; top: 1px; }
 
 /* fancybox */
 

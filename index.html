@@ -35,20 +35,3 @@ title: Echo в России
         <div class="archive__hr"></div>
     {% endfor %}
 </div>
-
-<script type="text/javascript">
-    $(function() {
-        $(".comments_counter").each(function() {
-            var $target = $(this),
-                url = $target.attr('data-url')
-                q = "childrenof:" + url
-                  + " -state:SystemFlagged,ModeratorFlagged";
-            new Echo.Counter({
-                "target": $target,
-                "appkey": "uldev.js-kit.com",
-                "query": q,
-                "liveUpdates": true//false
-            });
-        });
-    });
-</script>
