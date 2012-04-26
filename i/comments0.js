@@ -105,6 +105,19 @@ $(function() {
         "busName": "jskit"
     });
 
+    function suffix(c) {
+        return (c%100 === 11 || c%100 === 12 || c%100 === 13 || c%100 === 14) ? "иев"
+             : (c%10  === 1) ? "ий"
+             : (c%10  === 2  || c%10  === 3  || c%10  === 4) ? "ия"
+             : "иев"; 
+    }
+
+    Echo.Broadcast.subscribe("Counter.onUpdate", function(topic, data, contextId) {
+        var c = data.data.count;
+        var $target = $(data.target);
+        $target.html(c + " комментар" + suffix(c));
+    });
+
     $(".comments__stream").each(function() {
         var $target = $(this);
         var scope = $target.attr("data-url");
@@ -136,7 +149,6 @@ $(function() {
             "appkey": appkey,
             "targetURL": scope,
             "actionString": "Ваш комментарий...",
-            "youMustBeLoggedIn": "абырвалг",
             "plugins": [formAuth]
         });
     });
@@ -151,7 +163,7 @@ $(function() {
             "target": $target,
             "appkey": appkey,
             "query": q,
-            "liveUpdates": true//false
+            "liveUpdates": false
         });
     });
 

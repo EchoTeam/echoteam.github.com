@@ -13,8 +13,8 @@ title: Echo в России
     <div class="post__content">
         {{ post.content }}
     </div>
-    <a class="post__comments" href="{{ post.url }}#comments">
-        <span class="comments_counter" data-url="{{ site.url}}{{ post.url }}"></span> комментариев
+    <a class="post__comments comments_counter" href="{{ post.url }}#comments" data-url="{{ site.url}}{{ post.url }}">
+        Комментарии
     </a>
 </div><div class="post__hr"></div>
 
@@ -27,8 +27,8 @@ title: Echo в России
             <div class="archive__item__subtitle">
                 <span class="archive__item__author">{{ post.author }}, </span>
                 <span class="archive__item__date">{{ post.date | date: "%d.%m.%Y" }}</span>
-                — <a class="archive__comments" href="{{ post.url }}#comments">
-                    <span class="comments_counter" data-url="{{ site.url}}{{ post.url }}"></span> комментариев
+                — <a class="archive__comments comments_counter" href="{{ post.url }}#comments" data-url="{{ site.url}}{{ post.url }}">
+                    Комментарии
                 </a>
             </div>
         </div>
