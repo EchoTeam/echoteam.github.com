@@ -138,7 +138,8 @@ div.echo-secondaryFont { font: 13px/24px 'PT Sans', Calibri, sans-serif; }
 
 .comments__stream { padding: 72px 0 64px; }
 .echo-stream-header, .echo-item-re { display: none; }
-div.echo-item-authorName { color: #999; font: 13px 'PT Sans', Calibri, sans-serif; }
+div.echo-item-authorName { float: left; color: #999; font: 13px/24px 'PT Sans', Calibri, sans-serif; height: 24px }
+div.echo-item-control-delim { float: left; margin: 0 3px; }
 div.echo-item-body { padding: 0; font: 16px/24px 'PT Serif', Cambria, serif; }
 
 .echo-stream-body { border: 1px solid #bbb; border-right-width: 2px;}
@@ -152,7 +153,7 @@ div.echo-item-container-child { padding: 12px 12px 4px; }
 div.echo-item-replyForm.echo-item-depth-1 { margin-bottom: 22px; padding: 6px; }
 div.echo-item-childrenMarker { border-color: transparent transparent #e7e7e7; filter: none; }
 div.echo-item-depth-1 { margin: 0 74px 2px; }
-div.echo-item-frame { margin: -2px 0 2px; }
+div.echo-item-frame { margin: -4px 0 4px; }
 div.echo-item-expandChildren { padding: 9px 12px 8px 8px; }
 
 div.echo-application-message { border: none; }

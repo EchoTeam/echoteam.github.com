@@ -37,7 +37,7 @@ Echo.Localization.extend({
   "loading": "Одну минуточку...",
   "emptyStream": "Здесь пока никто ничего не написал.",
   "waiting": "Одну минуточку (обновляем поток)...",
-  "new": "Новый"
+  "new": "новых"
 }, "Stream");
 
 /* Echo Submit Form */
@@ -77,7 +77,6 @@ Echo.Localization.extend({
   "replyControl": "Ответить"
 }, "Plugins.Reply");
 
-
 $(function() {
     var appkey = "uldev.js-kit.com";
 
@@ -95,9 +94,7 @@ $(function() {
         "identityManagerLogin": identityWindow,
         "identityManagerSignup": identityWindow,
         "identityManagerEdit": identityWindow,
-        "submitPermissions": "forceLogin",
-
-        "youMustBeLoggedIn": "абырвалг"
+        "submitPermissions": "forceLogin"
     };
 
     Backplane.init({
@@ -118,6 +115,16 @@ $(function() {
         $target.html(c + " комментар" + suffix(c));
     });
 
+    var authorTweaks = Echo.createPlugin({
+        "name": "AuthorTweaks",
+        "applications": ["Stream"],
+        "init": function(plugin, application) {
+            plugin.extendTemplate("Item", "<span></span>", "replace", "echo-item-authorName");
+            plugin.extendTemplate("Item", '<div class="echo-item-authorName"></div>', 'insertBefore', 'echo-item-date');
+            plugin.extendTemplate("Item", '<div class="echo-item-control-delim"> · </div>', 'insertBefore', 'echo-item-date');
+        }
+    });
+
     $(".comments__stream").each(function() {
         var $target = $(this);
         var scope = $target.attr("data-url");
@@ -127,16 +134,18 @@ $(function() {
             "appkey": appkey,
             "query": "childrenof:" + scope
                    + " -state:SystemFlagged,ModeratorFlagged"
+                   + " sortOrder:chronological"
                    + " children:1"
                    + " -state:SystemFlagged,ModeratorFlagged"
-                   + " sortOrder:chronological"
-                   + " childrenSortOrder:chronological",
+                   + " childrenSortOrder:chronological"
+                   + " childrenItemsPerPage:10",
             "viaLabel": { "icon": true, "text": true },
             "plugins": [{
-                    "name": "Reply",
-                    "actionString": "Ваш комментарий...",
-                    "nestedPlugins": [formAuth]
-            }]
+                "name": "Reply",
+                "actionString": "Ваш комментарий...",
+                "nestedPlugins": [formAuth]
+            },
+            authorTweaks]
         });
     });
 
