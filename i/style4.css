@@ -155,6 +155,7 @@ div.echo-item-childrenMarker { border-color: transparent transparent #e7e7e7; fi
 div.echo-item-depth-1 { margin: 0 74px 2px; }
 div.echo-item-frame { margin: -4px 0 4px; }
 div.echo-item-expandChildren { padding: 9px 12px 8px 8px; }
+div.echo-item-avatar img { border-radius: 4px; }
 
 div.echo-application-message { border: none; }
 span.echo-application-message-empty { padding: 0; background-image: none; }
@@ -173,7 +174,8 @@ div.echo-submit-auth * { line-height: 24px; }
 span.echo-submit-forcedLoginUserInfoMessage { color: #933; line-height: 24px; font-weight: normal; }
 div.echo-auth-anonymous { float: right; }
 div.echo-auth-name, div.echo-auth-edit, div.echo-auth-logout { font: 13px/24px 'PT Sans', Calibri, sans-serif; margin: 0 0 0 8px; padding: 0; }
-div.echo-auth-avatar { height: 24px; }
+div.echo-auth-avatar { height: 24px;  }
+div.echo-auth-avatar img { border-radius: 4px; }
 div.echo-auth-edit { display: none; }
 span.echo-auth-or, span.echo-auth-signup { display: none; }
 
