@@ -20,7 +20,7 @@ title: Echo в России
 
 
 <div class="archive">
-    <div class="archive__header">~ Предыдущие записи ~</div>
+    <div class="archive__header">Предыдущие записи</div>
     {% for post in site.posts offset:1 %}
         <div class="archive__item">      
             <h1 class="archive__item__header"><a href="{{post.url}}">{{ post.title }}</a></h1>

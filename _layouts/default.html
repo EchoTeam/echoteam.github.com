@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/i/style4.css" type="text/css" />
+    <link rel="stylesheet" href="/i/style5.css" type="text/css" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/echorussia" />
 
@@ -27,18 +27,20 @@
 <body>
     <div id="page">
         <div class="head">
-            <h1 class="head__header">
+            {% if page.url == "/index.html" %}
+                <div class="head__logo"></div>
+            {% else %}
+                <a href="/" class="head__logo"></a>
+            {% endif %}
+            <div class="head__links">
                 {% if page.url == "/index.html" %}
-                    <div class="head__logo"></div>
-                    Echo в России
+                    <span class="head__blog head__blog_selected">Блог</span>
                 {% else %}
-                    <a href="/">
-                        <div class="head__logo"></div>
-                        Echo в России
-                    </a>
+                    <a href="/" class="head__blog">Блог</a>
                 {% endif %}
+                <!--a href="/jobs.html" class="head__jobs">Вакансии</a-->
                 <a href="http://feeds.feedburner.com/echorussia" class="head__rss">RSS</a>
-            </h1>
+            </div>
         </div>
         {{ content }}
     </div>
