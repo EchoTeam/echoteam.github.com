@@ -227,3 +227,9 @@ div.echo-submit-post-container { float: none; }
 .archive__item__subtitle a { color: inherit; border-bottom: 1px solid #bbb; }
 .archive__item__subtitle a:hover { color: #c33; border-color: #f66; }
 
+/* echoadmin */
+
+.post_echoadmin { padding-top: 0; }
+.post_echoadmin .comments { background: #EEE; }
+.comments__stream_admin { padding: 72px 0 64px; }
+.echo-item-modeSwitch { margin-top: -16px; }

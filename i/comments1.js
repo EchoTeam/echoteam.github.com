@@ -76,6 +76,9 @@ Echo.Localization.extend({
 Echo.Localization.extend({
   "replyControl": "Ответить"
 }, "Plugins.Reply");
+Echo.Localization.extend({
+  "editControl": "Редактировать"
+}, "Plugins.Edit");
 
 $(function() {
     var appkey = "uldev.js-kit.com";
@@ -133,10 +136,10 @@ $(function() {
             "target": $target,
             "appkey": appkey,
             "query": "childrenof:" + scope
-                   + " -state:SystemFlagged,ModeratorFlagged"
+                   + " -state:ModeratorFlagged,ModeratorDeleted"
                    + " sortOrder:chronological"
                    + " children:1"
-                   + " -state:SystemFlagged,ModeratorFlagged"
+                   + " -state:ModeratorFlagged,ModeratorDeleted"
                    + " childrenSortOrder:chronological"
                    + " childrenItemsPerPage:10",
             "viaLabel": { "icon": true, "text": true },
@@ -145,7 +148,8 @@ $(function() {
                 "actionString": "Ваш комментарий...",
                 "nestedPlugins": [formAuth]
             },
-            authorTweaks]
+            authorTweaks,
+            {"name": "Edit"}]
         });
     });
 
@@ -166,8 +170,9 @@ $(function() {
         var $target = $(this);
         var url = $target.attr('data-url');
         var q = "childrenof:" + url
-              + " -state:SystemFlagged,ModeratorFlagged";
-
+              + " -state:ModeratorFlagged,ModeratorDeleted"
+              + " children:1"
+              + " -state:ModeratorFlagged,ModeratorDeleted";
         new Echo.Counter({
             "target": $target,
             "appkey": appkey,
@@ -176,4 +181,24 @@ $(function() {
         });
     });
 
+    $(".comments__stream_admin").each(function() {
+        var $target = $(this);
+        var scope = $target.attr('data-scope');
+
+        new Echo.Stream({
+            "target": $target,
+            "appkey": appkey,
+            "query": "childrenof:" + scope
+                   + " children:1"
+                   + " childrenSortOrder:chronological"
+                   + " childrenItemsPerPage:10",
+            "viaLabel": { "icon": true, "text": true },
+            "plugins": [
+                {"name": "Curation"},
+                {"name": "Edit"},
+                {"name": "UserBan"},
+                {"name": "UserPrivileges"}
+            ]
+        });
+    });
 });
