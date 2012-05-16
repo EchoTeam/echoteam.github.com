@@ -63,9 +63,8 @@ ol, ul { margin: 0 0 0 2em; }
 ol { list-style-type: decimal }
 ul { list-style-type: square }
 p { margin: 1em 0; }
-/*blockquote { margin: 1em 2em; font-style: italic; }*/
-/*blockquote i, blockquote em { font-style: normal; }*/
-blockquote { 
+blockquote { padding: 0 32px 4px; }
+/*blockquote { 
   padding: 12px 88px; margin: 12px -64px; 
   color: #333;
   border-top: 1px solid #CCC; border-bottom: 1px solid  #CCC;
@@ -73,7 +72,7 @@ blockquote {
   background-image: url(q1.gif), url(q2.gif);
   background-position: 0 0, 100% 100%;
   background-repeat: no-repeat;
-}
+}*/
 
 /* layout */
 body { font: 16px/24px 'PT Serif', Cambria, serif; background: #ccc url(body.png); }
@@ -120,6 +119,9 @@ body { font: 16px/24px 'PT Serif', Cambria, serif; background: #ccc url(body.png
     border-radius: 8px 8px 0 0;
 }
 .post__comments:hover { background: #48d; }
+
+.photo { text-align: center; }
+
 /* comments */
 
 .comments { background: #eee url(/i/comments_bg.png) top left no-repeat; width: 754px; margin: 0 -64px; padding: 0 64px 0; }
