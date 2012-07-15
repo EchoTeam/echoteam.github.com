@@ -122,6 +122,16 @@ body { font: 16px/24px 'PT Serif', Cambria, serif; background: #ccc url(body.png
 
 .photo { text-align: center; }
 
+.carting { border-collapse: collapse; margin: 0 auto; }
+.carting td, .carting th { text-align: left; padding: 4px 12px; }
+.carting__carts td { text-align: center; color: #777; font-family: monospace; font-size: 12px;}
+.carting__time td { text-align: right; font-family: monospace; }
+.carting thead th { font-style: italic; text-align: center; }
+.carting__odd { background: #D9D9D9; }
+.carting__even { background: #EEE; }
+.carting__day { font-style: italic; }
+.carting__winner { color: #393; }
+
 /* comments */
 
 .comments { background: #eee url(/i/comments_bg.png) top left no-repeat; width: 754px; margin: 0 -64px; padding: 0 64px 0; }
