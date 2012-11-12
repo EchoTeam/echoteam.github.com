@@ -142,7 +142,12 @@ $(function() {
                    + " -state:ModeratorFlagged,ModeratorDeleted"
                    + " childrenSortOrder:chronological"
                    + " childrenItemsPerPage:10",
-            "viaLabel": { "icon": true, "text": true },
+            "viaLabel": { "icon": true, "text": false },
+            "contentTransformations": {
+                "text": ["urls", "newlines"],
+                "html": ["urls", "newlines"],
+                "xhtml": ["urls"]
+            },
             "plugins": [{
                 "name": "Reply",
                 "actionString": "Ваш комментарий...",

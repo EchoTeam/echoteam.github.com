@@ -144,6 +144,12 @@ div.echo-primaryFont, span.echo-primaryFont, input.echo-primaryFont, textarea.ec
 div.echo-secondaryColor, input.echo-secondaryColor { color: #999; }
 div.echo-secondaryFont { font: 13px/24px 'PT Sans', Calibri, sans-serif; } 
 
+.comments a { color: hsl(208,60%,50%); }
+.comments a:visited { color: hsl(208,30%,50%); }
+.comments a:hover { color: #c33; }
+.comments a:active { position: relative; top: 1px; }
+
+
 /* comments - stream */
 
 .comments__stream { padding: 72px 0 64px; }
