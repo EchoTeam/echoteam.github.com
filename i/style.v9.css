@@ -80,10 +80,10 @@ body { font: 16px/24px 'PT Serif', Cambria, serif; background: #ccc url(body.png
 #page { width: 754px; margin: 0 auto; }
 
 /* head */
-.head { margin: 32px 0 32px 20px; height: 100px; text-align: left; }
+.head { margin: 32px 0 32px 0px; height: 100px; text-align: left; }
 .head__logo { display: inline-block; width: 250px; height: 100px; background: url(head.png); }
 .head__links { float: right; height: 100px; }
-.head__blog, .head__jobs, .head__rss {
+.head__blog, .head__jobs, .head__about, .head__rss {
   background: url(head.png);
   display: inline-block; height: 60px; margin: 30px 10px 10px;
   font: 18px/45px 'PT Sans', sans-serif; color: #000;
@@ -92,6 +92,8 @@ body { font: 16px/24px 'PT Serif', Cambria, serif; background: #ccc url(body.png
 .head__blog:hover, .head__blog_selected { background-position: -250px -60px; }
 .head__jobs { width: 140px; background-position: -350px 0;}
 .head__jobs:hover, .head__jobs_selected { background-position: -350px -60px; }
+.head__about { width: 100px; background-position: -250px 0;}
+.head__about:hover, .head__about_selected { background-position: -250px -60px; }
 .head__rss { width: 60px; background-position: -490px 0;}
 .head__rss:hover, .head__ress_selected { background-position: -490px -60px; }
 

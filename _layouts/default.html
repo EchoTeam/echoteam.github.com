@@ -44,6 +44,11 @@
                 {% else %}
                     <a href="/jobs.html" class="head__jobs">Вакансии</a>
                 {% endif %}
+                {% if page.url == "/about.html" %}
+                    <span class="head__about head__about_selected">О нас</span>
+                {% else %}
+                    <a href="/about.html" class="head__about">О Нас</a>
+                {% endif %}
                 <a href="http://feeds.feedburner.com/echorussia" class="head__rss">RSS</a>
             </div>
         </div>
