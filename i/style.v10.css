@@ -105,6 +105,10 @@ body { font: 16px/24px 'PT Serif', Cambria, serif; background: #ccc url(body.png
 .post__subtitle a { color: inherit; border-bottom: 1px solid #bbb; }
 .post__subtitle a:hover { color: #c33; border-color: #f66; }
 
+.post__warning { background-color: hsl(175.06, 49.13%, 66.08%); color: white; margin: 1em -64px 0; padding: 10px 64px; }
+.post__warning a { color: inherit; text-decoration: underline; }
+.post__warning a:hover { color: #EEE; }
+
 .post__content { padding: 8px 0 16px; color: #000; }
 
 .post__content a { color: hsl(208,60%,50%); }
