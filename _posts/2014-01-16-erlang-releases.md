@@ -104,7 +104,7 @@ Let’s emulate upgrade procedure. We return back to our project directory:
     $ touch foo && git add foo && git commit -m "foo"
     $ git tag 0.2.0
 
-Here we add a file to the repository. We do this for generating a new commit. The tag will give us a clean release/rpm version.
+Here we add a file to the repository. We do this for generating a new commit. The tag will give us a clean release/rpm version. Then we generate an upgrade package:
 
     $ service-build-upgrade demo demo-0.1.0-1.x86_64.rpm
 
