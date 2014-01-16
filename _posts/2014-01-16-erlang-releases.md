@@ -7,7 +7,7 @@ author_url: http://www.linkedin.com/in/ylukyanov
 
 # Introduction
 
-When you try to google "erlang releases", you will only come across a few pages on the subject. Most of them will be [the official documentation](http://www.erlang.org/doc/design_principles/release_structure.html). There will also be a couple about releases with [rebar](https://github.com/rebar/rebar) and a relatively new tool [relx](http://relx.org/). Most likely you have already read those pages, or, at least, have made one or several approaches to that. But you are still not using OTP releases. And you certainly know why. Although those rare pages on the topic are worth reading, they do not give you a 'got-it' feeling. You lose yourself in the details and think that maybe it is not the right time for Erlang releases in your project, or it’s just too complicated and "git pull && make" on all your production nodes will do the thing for you forever. Meanwhile you also often find yourself reinventing the wheel. You implement ad-hoc procedures to update your code on-the-fly, to reload configuration files, scripts to start/stop applications and supervisors, etc. If this sounds similar, this post is for you.
+When you try to google "erlang releases", you will only come across a few pages on the subject. Most of them will be [the official documentation](http://www.erlang.org/doc/design_principles/release_structure.html). There will also be a couple about releases with [rebar](https://github.com/rebar/rebar) and a relatively new tool [relx](http://relx.org/). Most likely you have already read those pages, or, at least, have made one or several approaches to that. But you are still not using OTP releases. And you certainly know why. Although those rare pages on the topic are worth reading, they do not give you a 'got-it' feeling. You lose yourself in the details and think that maybe it is not the right time for Erlang releases in your project, or it’s just too complicated and "git pull && make" on all your production nodes will do the thing for you forever. Meanwhile you also often find yourself reinventing the wheel. You implement ad-hoc procedures to update your code on-the-fly, to reload configuration files, scripts to start/stop applications and supervisors, etc. If this sounds familiar, this post is for you.
 
 # Erlang releases overview
 
@@ -23,7 +23,7 @@ Here come to the rescue such tools as [rebar](https://github.com/rebar/rebar) an
 
 # Rebar service template
 
-At Echo, we created [a rebar template](https://github.com/EchoTeam/rebar-templates) that builds a clean Erlang service framework which supports Erlang/OTP releases out of the box. It’s just a collection of files and scripts in right places that, with extensive help of rebar and some plugins, shapes a basement of a future service.
+At Echo, we created [a rebar template](https://github.com/EchoTeam/rebar-templates) that builds a clean Erlang service framework which supports Erlang/OTP releases out of the box. It’s just a collection of files and scripts in right places that, with extensive help of rebar and some plugins, shapes a basis of a future service.
 
 First, you need to install templates:
 
