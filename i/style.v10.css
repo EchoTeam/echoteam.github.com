@@ -41,7 +41,22 @@ table { border-collapse: collapse; border-spacing: 0; }
 * { box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; }
 
 pre, code { font-family: monospace; white-space: pre-wrap; }
-pre { margin: 16px 0; }
+pre, code {
+    margin: 0 2px;
+    padding: 0px 5px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-size: 14px;
+}
+pre code {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    word-wrap: normal;
+}
 sup, sub { vertical-align: middle; position: relative; font-size: 75%; }
 sup { bottom: 0.5em; }
 sub { top: 0.5em; }
