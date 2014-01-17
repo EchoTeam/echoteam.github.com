@@ -15,7 +15,7 @@ Erlang/OTP release principles are a set of rules and practices which allows you 
 
 The process looks simple from a bird’s eye view. You generate first release package ([a target system](http://www.erlang.org/doc/system_principles/create_target.html)) and install the system to your nodes. Then you decide to upgrade your applications and generate another release package with updated code and place it near the first one. Finally, you just switch the system to the new release. You can also switch back to the previous release if needed.
 
-# The real situation
+# The conventional approach
 
 Erlang OTP comes with the sasl (System Architecture Support Libraries) application which provides, among other things, a set of tools to help you with making Erlang releases.  But, in fact, there are a lot of details and corner cases that you may come across.
 
