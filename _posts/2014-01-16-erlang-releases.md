@@ -28,7 +28,7 @@ At Echo, we created [a rebar template](https://github.com/EchoTeam/rebar-templat
 First, you need to install templates:
 
     $ mkdir -p ~/.rebar/templates
-    $ git clone git@github.com:EchoTeam/rebar-templates.git ~/.rebar/templates
+    $ git clone https://github.com/EchoTeam/rebar-templates.git ~/.rebar/templates
 
 And rebar:
 
@@ -76,7 +76,7 @@ Let’s install [service packager](https://github.com/EchoTeam/service-packager)
 
     $ cd ~
     $ sudo gem install fpm
-    $ git clone git@github.com:EchoTeam/service-packager.git
+    $ git clone https://github.com/EchoTeam/service-packager.git
     $ cd service-packager
     $ make rpm
     $ sudo yum localinstall echo-service-packager-*.rpm
